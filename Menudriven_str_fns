@@ -1,0 +1,122 @@
+import java.util.*;
+public class Menudriven_str_fns
+{
+	void reverse(String word1)
+	
+	{
+   
+		char[] c=word1.toCharArray();
+		String Str="";
+		for(int i=c.length-1;i>=0;i--)
+		{
+			Str=Str+c[i];
+		}
+		
+		System.out.println("the reverse of word"+Str);
+	}
+	   void word_split(String Word2,String letter)
+	
+	   {
+		   
+		String [] arr =Word2.split(letter);
+				for(int i=0;i<arr.length;i++)
+				{
+					System.out.println(arr[i]);
+				}
+		
+	    }
+	   void word_search(String Str3,String Str4)
+	   { 
+		   String [] arr1=Str3.split("//s");
+		   for(int i=0;i<arr1.length;i++)
+		   {
+			   System.out.println(arr1[i].contains(Str4));
+		   }
+	   }
+	 
+	   void palindrome(String Str6)
+	   {
+		   char[] arr3=Str6.toCharArray();
+			String Str8="";
+			for(int i=arr3.length-1;i>=0;i--)
+			{
+				Str8=Str8+arr3[i];
+			}
+			
+			System.out.println("the reverse of word"  +Str8);
+			if(Str8==Str6)
+			{
+				System.out.println(Str8 +"is palindrome");
+			}else {
+				System.out.println(Str8 +"is not palindrome");
+			}
+	   }
+	   void concat( String Word3,String word4)
+	   {
+		 // System.out.println("enter sec word");
+		 // String Word4=s.nextLine();
+		   String i=Word3.concat(word4);
+		   System.out.println("the word is   "+i);
+	   }
+	   void Uppercase(String Word5)
+	   {
+		   System.out.println(Word5.toUpperCase());
+	   }
+	   
+	   
+	public static void main(String[] args) 
+	{
+		
+	    Menudriven_str_fns v=new Menudriven_str_fns();
+		Scanner s = new Scanner(System.in);
+		System.out.println("enter the word");
+		String q=s.nextLine();
+		int choice;
+		do {
+			
+		//int choice;
+		System.out.println("1.reverse");
+		System.out.println("2.word split");
+		System.out.println("3.search word");
+        System.out.println("4.palindrome");
+		System.out.println("5.concat");
+		System.out.println("6.upper case");
+		System.out.println("7.thank u...");
+		System.out.println("enter the choice");
+		choice=s.nextInt();
+		switch(choice)
+		{
+		case 1: v.reverse(q);
+	        	break;
+		case 2: System.out.println("enter the letter");
+		        String let=s.next();     
+			     v.word_split(q,let);    // to split
+			     break;
+			   
+		case 3:System.out.println("enter a word to search");
+		       String d=s.next();
+		       v.word_search(q,d);       //search word
+		       break;
+		       
+		case 4:v.palindrome(q);
+		       break;
+		       
+		case 5:System.out.println("enter the sec word");
+		      String y=s.next();
+			  v.concat(q,y);                // concat
+		       break;
+		case 6:v.Uppercase(q);              //uppercase
+		        break;
+		case 7: System.out.println("thank u....");  //to exit
+		       break;
+			  
+		default:System.out.println("not mentioned");
+		        break;
+	}
+		
+		}while(choice!=7);
+		
+		
+	}
+
+}
