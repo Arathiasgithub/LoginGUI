@@ -1,0 +1,15 @@
+import java.util.*;
+public class Split {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter string");
+		String a=s.nextLine();
+		String[] words=a.split("\\s");
+		for(String w:words)
+		{
+			System.out.println(w);
+		}
+	}
+
+}
