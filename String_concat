@@ -1,0 +1,15 @@
+import java.util.*;
+public class String_concat {
+
+	public static void main(String[] args) {
+		Scanner v=new Scanner(System.in);
+		System.out.println("enter first word");
+		String r=v.nextLine();
+		System.out.println("enter sec word");
+		String s=v.nextLine();
+		String t=r.concat(s);
+		System.out.println("the word is  " +t);
+
+	}
+
+}
